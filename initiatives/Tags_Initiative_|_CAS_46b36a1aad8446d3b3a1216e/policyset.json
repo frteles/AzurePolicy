@@ -1,0 +1,149 @@
+{
+ "properties": {
+  "displayName": "Tags Initiative | CAS",
+  "policyType": "Custom",
+  "description": "",
+  "metadata": {
+   "category": "Tags | CAS",
+   "version": "1.0",
+   "createdBy": "0b68b84b-613d-471d-8a51-688e0a0a3fe2",
+   "createdOn": "2020-10-26T11:05:34.8353217Z",
+   "updatedBy": "0b68b84b-613d-471d-8a51-688e0a0a3fe2",
+   "updatedOn": "2020-11-04T10:27:35.7310638Z"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Require tag to RG and value from list - Status",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/20e3d869-5715-4a35-91cd-6c934fc412d2",
+    "parameters": {
+     "ListofAllowedtagValues": {
+      "value": [
+       "PROD",
+       "DEV"
+      ]
+     }
+    },
+    "groupNames": [
+     "Require"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Inherit a tag from the resource group - Status",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/4cbf08da-3554-4588-a939-bca0785fff48",
+    "parameters": {
+     "tagName": {
+      "value": "Status"
+     }
+    },
+    "groupNames": [
+     "Inherit"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Inherit a tag from the resource group - Project",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/4cbf08da-3554-4588-a939-bca0785fff50",
+    "parameters": {
+     "tagName": {
+      "value": "Project"
+     }
+    },
+    "groupNames": [
+     "Inherit"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Inherit a tag from the resource group - Application",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/4cbf08da-3554-4588-a939-bca0785fff58",
+    "parameters": {
+     "tagName": {
+      "value": "Application"
+     }
+    },
+    "groupNames": [
+     "Inherit"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Audit tag not like naming convention - Project",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/2bbe6013-ad87-4aff-9faf-913853c6e370",
+    "parameters": {
+     "tagName": {
+      "value": "Project"
+     },
+     "tagValue": {
+      "value": "PR#####"
+     },
+     "tagValue2": {
+      "value": "PP#####"
+     }
+    },
+    "groupNames": [
+     "Audit"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Audit tag not like naming convention - Application",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/2bbe6013-ad87-4aff-9faf-913853c6e368",
+    "parameters": {
+     "tagName": {
+      "value": "Application"
+     },
+     "tagValue": {
+      "value": "C#####"
+     }
+    },
+    "groupNames": [
+     "Audit"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag and its value on resource groups - Naming Convention - Project",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/9c0e789f-ad2b-4266-aad9-5dbffb27b58d",
+    "parameters": {
+     "tagName": {
+      "value": "Project"
+     },
+     "tagValue": {
+      "value": "PR#####"
+     },
+     "tagValue2": {
+      "value": "PP#####"
+     }
+    },
+    "groupNames": [
+     "Require"
+    ]
+   },
+   {
+    "policyDefinitionReferenceId": "Require a tag and its value on resource groups - Naming Convention - Application",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policyDefinitions/9c0e789f-ad2b-4266-aad9-5dbffb27b595",
+    "parameters": {
+     "tagName": {
+      "value": "Application"
+     },
+     "tagValue": {
+      "value": "C#####"
+     }
+    },
+    "groupNames": [
+     "Require"
+    ]
+   }
+  ],
+  "policyDefinitionGroups": [
+   {
+    "name": "Inherit"
+   },
+   {
+    "name": "Require"
+   },
+   {
+    "name": "Audit"
+   }
+  ]
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/27985cd8-6a00-477d-88a3-2c43039bf716/providers/Microsoft.Authorization/policySetDefinitions/46b36a1aad8446d3b3a1216e",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "46b36a1aad8446d3b3a1216e"
+}
